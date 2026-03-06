@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML 테이블 예시</title>
+    <style>
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: center;
+      }
+      th {
+        background-color: #f2f2f2;
+      }
+      tbody {
+        color: white;
+        background-color: magenta;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>테이블 예시</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>이름</th>
+          <th>나이</th>
+          <th>직업</th>
+          <th>근무 기간</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>홍길동</td>
+          <td>30</td>
+          <td>개발자</td>
+          <td>5</td>
+        </tr>
+        <tr>
+          <td>이순신</td>
+          <td>45</td>
+          <td>장군</td>
+          <td>10</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="4">총 2명</td>
+        </tr>
+      </tfoot>
+    </table>
+  </body>
+</html>
