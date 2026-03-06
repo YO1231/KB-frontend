@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>CSS Selector : Adjacent sibling Selector(인접선택자)</title>
+    <style>
+      span {
+        border: darkblue dotted 5px;
+      }
+      div,
+      p {
+        padding: 10px;
+        margin: 10px;
+        font-weight: bold;
+      }
+
+      div {
+        background: skyblue;
+      }
+
+      div + p {
+        background: yellow;
+        color: black;
+      }
+
+      p + p {
+        background: green;
+        color: #000000;
+      }
+      p + h2 {
+        color: aqua;
+      }
+      h2 + p {
+        background: #00ff00;
+      }
+      p + span {
+        border: solid salmon;
+        border-radius: 10px 0 0 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+    <p>Adjacent sibling Selector(인접선택자)</p>
+    <span>span1</span>
+    <p>Adjacent sibling Selector(인접선택자)</p>
+    <h2>h2</h2>
+    <span>span3</span>
+    <p>마지막 p</p>
+  </body>
+</html>
