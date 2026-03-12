@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      //   console.log(typeof {});
+      //   console.log(typeof function () {});
+      //   console.log(function () {});
+      //   var show = function () {
+      //     alert('test');
+      //   };
+      //   show();
+      function x(data) {
+        if (data > 5) {
+          return function () {
+            // return 값이 하나의 함수도 가능
+            alert('innerFunction');
+          };
+        }
+      }
+      x(7)();
+    </script>
+  </head>
+  <body></body>
+</html>
