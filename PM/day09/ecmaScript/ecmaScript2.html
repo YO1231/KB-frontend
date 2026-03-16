@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // default Parameters
+      //   function greet(name = '유주☆', x = 10, y = 20 + 5) {
+      //     return `Hello, ${name}`;
+      //   }
+      //   console.log(greet());
+      //   console.log(greet('☆강휘'));
+
+      // Rest Parameters
+      function sum(a = 0, ...ns) {
+        console.log(typeof ns);
+        console.log(ns);
+        // return ns.reduce((acc, num) => acc + num, a);
+
+        let result = a;
+        for (let i = 0; i < ns.length; i++) {
+          result += ns[i];
+        }
+        return result;
+      }
+      console.log(sum(10, 20, 30, 40, 50, 60));
+    </script>
+  </body>
+</html>
