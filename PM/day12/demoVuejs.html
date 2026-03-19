@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <h2>{{message}}</h2>
+      <h3>{{m2}}</h3>
+    </div>
+    <script src="https://unpkg.com/vue"></script>
+    <script>
+      var model = {
+        message: '소리없는 아우성!',
+        m2: 'hello',
+      };
+      var app = Vue.createApp({
+        name: 'App', // Root Component의 이름은 관용적
+        data() {
+          return model;
+        },
+      });
+      var vm = app.mount('#app');
+    </script>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const [x, y, z] = [10, 20, 30];
+      console.log(x, y, z);
+
+      const person = {
+        name: 'Apple',
+        data: function () {
+          alert('test');
+        },
+        age: 25,
+      };
+      //   console.log(person.name);
+      //   person.data();
+      //   console.log(person['age']);
+      //   const { name } = person;
+      //   console.log(name);
+
+      let p1 = person.name;
+      p1 = 'soobin';
+      //   p1['age'] = 27;
+      console.log(p1);
+      console.log(person);
+
+      //   let arr1 = [1, 2, 3];
+      //   let arr2 = [...arr1, 4, 5];
+      //   console.log(arr1);
+      //   console.log(arr2);
+
+      // Rest 연산자
+      // a=누적값, b=현재값, 0=초기값
+      const sumAll = (...numbers) => numbers.reduce((a, b) => a * b, 1);
+
+      console.log(sumAll(1, 2, 3));
+    </script>
+  </body>
+</html>
