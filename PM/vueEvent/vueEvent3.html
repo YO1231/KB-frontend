@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <a href="https://www.naver.com" @click="checkMove">네이버로 이동</a>
+      <p>{{message}}</p>
+    </div>
+
+    <script src="https://unpkg.com/vue"></script>
+    <script>
+      var app = Vue.createApp({
+        name: 'App',
+        data() {
+          return {
+            message: '',
+          };
+        },
+        methods: {
+          checkMove(e) {
+            const result = confirm('정말 이동하시겠습니까?');
+            if (!result) {
+              e.preventDefault();
+              this.message = '이동을 취소합니다.';
+            } else {
+              this.message = '페이지 이동';
+            }
+          },
+        },
+      }).mount('#app');
+    </script>
+  </body>
+</html>
