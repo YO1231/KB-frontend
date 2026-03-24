@@ -6,17 +6,28 @@
     <title>Document</title>
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app">
+      <child-component :propsdata="message"></child-component>
+    </div>
 
     <script src="https://unpkg.com/vue"></script>
     <script>
       var app = Vue.createApp({
         name: 'App',
         data() {
-          return {};
+          return { message: 'props 개념!' };
         },
       });
 
+      app.component('child-component', {
+        data() {
+          return {};
+        },
+        props: {
+          propsdata: String,
+        },
+        template: '<p>Root로부터 전달된 데이터는 "{{ propsdata }}"입니다.</p>',
+      });
       var vm = app.mount('#app');
     </script>
   </body>

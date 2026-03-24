@@ -118,3 +118,11 @@ dist
 .pnp.*
 
 .idea/
+
+node_modules/
+
+test-vue-app/
+dist/
+
+.vscode/
+.DS_Store
