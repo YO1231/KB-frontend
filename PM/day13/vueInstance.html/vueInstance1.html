@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <!--View-->
+      <div>
+        <span>1보다 큰 수: </span>
+        <input type="number" v-model="num" /><br /><br />
+        1부터 입력한 숫자까지의 합☆: <span>{{sum()}}</span><br />
+        1부터 입력한 숫자까지의 합☆: <span>{{sum()}}</span><br />
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/vue"></script>
+    <script>
+      var app = Vue.createApp({
+        name: 'App',
+        data() {
+          return { num: 100 };
+        },
+        methods: {
+          sum() {
+            console.log('현재의 num값: ' + this.num);
+            return (this.num * (this.num + 1)) / 2;
+          },
+        },
+      });
+      app.mount('#app');
+    </script>
+  </body>
+</html>
