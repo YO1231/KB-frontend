@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <number-component v-bind:num="count"></number-component>
+    </div>
+
+    <script src="https://unpkg.com/vue"></script>
+    <script>
+      var app = Vue.createApp({
+        name: 'App',
+        data() {
+          return { count: 10 };
+        },
+      });
+
+      app.component('number-component', {
+        props: {
+          num: Number,
+        },
+        template: `
+        <div>
+            <p>전달 받은 값: {{num}}</p>
+            <p>2배 값: {{num*2}}</p>
+        </div>
+        `,
+      });
+      var vm = app.mount('#app');
+    </script>
+  </body>
+</html>
